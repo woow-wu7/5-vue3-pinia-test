@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { useCounterStore } from '@/stores/countStore'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: () => import('../views/PiniaView.vue')
     },
     {
       path: '/about',
@@ -26,6 +26,15 @@ const router = createRouter({
       component: () => import('../views/PiniaView.vue')
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  const countStore = useCounterStore()
+  console.log(
+    '在路由全局导航勾子-全局前置守卫-router.beforeEach中使用pinia',
+    countStore.state.count
+  )
+  next()
 })
 
 export default router
