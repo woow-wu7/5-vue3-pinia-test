@@ -31,7 +31,25 @@ import PiniaChild from '@/components/PiniaChild.vue'
 
 const countStore = useCounterStore()
 
-console.log('countStore', countStore)
+// store.$onAction
+countStore.$onAction(({ after, onError }) => {
+  // 你可以在这里创建所有钩子之间的共享变量，
+  // 同时设置侦听器并清理它们。
+  console.log('每个action调用时，执行 $onAction()')
+  after((resolvedValue) => {
+    // 可以用来清理副作用
+    // `resolvedValue` 是 action 返回的值，
+    // 如果是一个 Promise，它将是已经 resolved 的值
+  })
+  onError((error) => {
+    // 可以用于向上传递错误
+  })
+})
+
+// store.$subscribe
+countStore.$subscribe(() => {
+  console.log('state变化后，执行 $subscribe()')
+})
 
 // 1. 直接解构不会 响应式
 const { count: countNotReactive } = countStore.state
@@ -40,6 +58,7 @@ const { count: countNotReactive } = countStore.state
 // - 使用 toRefs 保持响应式
 // - 将一个响应式对象转换为一个 ( 普通对象 )，这个普通对象的每个属性都是指向源对象相应属性的 ref。
 // - 每个单独的 ref 都是使用 toRef() 创建的
+// const { count } = toRefs(countStore.$state.state) // 这样获取state也是可以的
 const { count } = toRefs(countStore.state)
 
 // 1. toRef  ===== ref
