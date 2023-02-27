@@ -3,13 +3,19 @@
     <section>
       <h1>This is an pinia page</h1>
 
-      <div>count/取属性方式: {{ countStore.state.count }}</div>
-      <div>count/toRefs方式: {{ count }}</div>
-      <div>count/toRef方式: {{ count3 }}</div>
-      <div>count/直接解构方式 {{ countNotReactive }}</div>
-      <button @click="count1">add/调用方法的方式</button>
+      <div class="state">
+        <div>count/取属性方式: {{ countStore.state.count }}</div>
+        <div>count/toRefs方式: {{ count }}</div>
+        <div>count/toRef方式: {{ count3 }}</div>
+        <div>count/直接解构方式 {{ countNotReactive }}</div>
+        <button @click="count1">add/调用方法的方式</button>
+        <button @click="getAll">获取 toRefs/object.ref 和 toRef/ref</button>
+      </div>
 
-      <button @click="getAll">获取 toRefs/object.ref 和 toRef/ref</button>
+      <div class="data">
+        <button @click="getData">action/异步获取远程数据</button>
+        <div>data: {{ countStore.state.data }}</div>
+      </div>
     </section>
 
     <PiniaChild />
@@ -43,6 +49,8 @@ const getAll = () => {
   console.log('count.value', count.value)
   console.log('count3.value', count3.value)
 }
+
+const getData = async () => await countStore.getData()
 </script>
 
 <style>
