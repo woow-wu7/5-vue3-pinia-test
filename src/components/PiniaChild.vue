@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="pinia__child">
+    <h1>This is an piniaChild page</h1>
 
     <div>count: {{ countStore.state.count }}</div>
     <button @click="count">add</button>
@@ -14,7 +14,7 @@ const count = () => countStore.add()
 </script>
 
 <style>
-.about {
+.pinia__child {
   border: 1px solid red;
   margin: 20px;
 }
