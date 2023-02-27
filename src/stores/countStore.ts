@@ -30,7 +30,7 @@ export const useCounterStore = defineStore(
     return { state, add, getData }
   },
   {
-    persist: true
+    // persist: true
     // 持久化设置
     // persistence 持久化 n noun
     // persist 坚持 v verb

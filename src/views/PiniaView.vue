@@ -8,7 +8,9 @@
         <div>count/toRefs方式: {{ count }}</div>
         <div>count/toRef方式: {{ count3 }}</div>
         <div>count/直接解构方式 {{ countNotReactive }}</div>
-        <button @click="count1">add/调用方法的方式</button>
+        <button @click="add">add</button>
+        <button @click="reset">reset</button>
+        <br />
         <button @click="getAll">获取 toRefs/object.ref 和 toRef/ref</button>
       </div>
 
@@ -29,6 +31,8 @@ import PiniaChild from '@/components/PiniaChild.vue'
 
 const countStore = useCounterStore()
 
+console.log('countStore', countStore)
+
 // 1. 直接解构不会 响应式
 const { count: countNotReactive } = countStore.state
 
@@ -43,7 +47,8 @@ const { count } = toRefs(countStore.state)
 // - 这样创建的 ref 与其源属性保持同步：改变源属性的值将更新 ref 的值，反之亦然
 const count3 = toRef(countStore.state, 'count')
 
-const count1 = () => countStore.add()
+const add = () => countStore.add()
+const reset = () => countStore.$reset() // 这里是通过插件重写的 $reset() 方法
 
 const getAll = () => {
   console.log('count.value', count.value)
