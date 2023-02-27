@@ -7,6 +7,13 @@
 2. 组件外使用store，比如在 router 的 ( 全局前置守卫 router.beforeEach 中使用 pinia 中的数据 )
 3. pinia/plugin 数据持久化
 4. 重写 store.$reset() 方法，( 好处: 复用，不用每个store都实现一个 )
+5. store属性的使用
+  - store.$id
+  - store.$state 获取state
+  - store.$reset() 通过建立一个新的状态对象，将 store 重设为初始状态
+  - store.$patch(state) 更新state
+  - $onAction(callback, detached?): () => void
+  - store.$subscribe
 ```
 
 ### (2) Pinia
