@@ -29,7 +29,7 @@ Pinia
 三种使用方式
 - 1. 直接 访问 和 修改
 - 2. 调用 store 定义的 方法
-- 3. 调用 dispatch 函数
+- 3. 调用 $patch 函数
 // 1. 直接 访问 和 修改
 const changeCount = () => {
   console.log('访问', countStore.state.count)
@@ -37,7 +37,7 @@ const changeCount = () => {
 }
 // 2. 调用 store 定义的 方法
 const changeCount2 = () => countStore.add()
-// 3. 调用 dispatch 函数
+// 3. 调用 $patch 函数
 const changeCount3 = () =>
   countStore.$patch({
     [countStore.state.count]: countStore.state.count++
