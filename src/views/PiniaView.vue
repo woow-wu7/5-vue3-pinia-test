@@ -25,7 +25,7 @@
       </div>
     </section>
 
-    <PiniaChild />
+    <PiniaChild name="name" />
   </div>
 </template>
 

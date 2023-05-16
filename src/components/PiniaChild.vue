@@ -8,6 +8,15 @@
 </template>
 
 <script setup lang="ts">
+// withDefaults 指定 props 的默认值
+withDefaults(
+  defineProps<{
+    name: String
+  }>(),
+  {
+    name: () => ''
+  }
+)
 import { useCounterStore } from '@/stores/countStore'
 const countStore = useCounterStore()
 const count = () => countStore.add()
