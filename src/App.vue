@@ -13,6 +13,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <nav>
         <RouterLink to="/pinia">Pinia</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/use-slots">useSlots</RouterLink>
       </nav>
     </div>
   </header>
