@@ -20,18 +20,39 @@
 
 ```
 Pinia
+- 兼容vue2
+- 兼容vue3 script-setup 写法
+- 插件系统
 --
 
 1
+三种使用方式
+- 1. 直接 访问 和 修改
+- 2. 调用 store 定义的 方法
+- 3. 调用 dispatch 函数
+// 1. 直接 访问 和 修改
+const changeCount = () => {
+  console.log('访问', countStore.state.count)
+  console.log('修改', countStore.state.count++)
+}
+// 2. 调用 store 定义的 方法
+const changeCount2 = () => countStore.add()
+// 3. 调用 dispatch 函数
+const changeCount3 = () =>
+  countStore.$patch({
+    [countStore.state.count]: countStore.state.count++
+  })
+
+2
 plugin
 - 持久化插件: pinia-plugin-persistedstate
 
-2
+3
 问题: 组件外如何使用store ？
 - 只要满足: app.use(pinia) 即vue插件pinia安装后，就可以调用各个store
 - https://pinia.vuejs.org/zh/core-concepts/outside-component-usage.html
 
-3
+4
 store属性
 - 内部暴露的属性和方法都是以 $ 开头的
 - 手写重置插件
@@ -49,7 +70,7 @@ store属性
   - $subscribe(callback, options?): () => void
   - 设置一个回调，当状态发生变化时被调用
 
-4
+5
 问题: 如何给每个store实现一个reset方法？(好处: 复用，不用每个store都实现一个)
 报错: 我们直接在 <script setup> 中调用 store.$reset 会报错，所以我们需要手动实现reset方法
 报错信息: Uncaught Error: 🍍: Store "counter" is built using the setup syntax and does not implement $reset().

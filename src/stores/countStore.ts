@@ -9,7 +9,13 @@ interface IState {
 export const useCounterStore = defineStore(
   'counter',
   () => {
-    const state = reactive<IState>({
+    // 这里不需要指定类型，因为会 类型推导
+    // const state = reactive<IState>({
+    //   count: 1,
+    //   data: {}
+    // })
+
+    const state = reactive({
       count: 1,
       data: {}
     })

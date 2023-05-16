@@ -10,9 +10,11 @@ import './assets/main.css'
 
 const app = createApp(App)
 
+// pinia官网
+// https://pinia.vuejs.org/introduction.html
 const pinia = createPinia()
-pinia.use(piniaPluginPersistedstate) // pinia 持久化
-pinia.use(piniaResetPlugin) // pinia reset
+pinia.use(piniaPluginPersistedstate) // pinia 持久化插件
+pinia.use(piniaResetPlugin) // pinia reset plugin
 
 app.use(pinia)
 app.use(router)
