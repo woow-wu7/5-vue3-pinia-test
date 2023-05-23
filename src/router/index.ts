@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/use-slots',
       name: 'uses-lots',
       component: () => import('../views/UseSlots.vue')
+    },
+    {
+      path: '/props',
+      name: 'props',
+      component: () => import('../views/PropsView.vue')
     }
   ]
 })

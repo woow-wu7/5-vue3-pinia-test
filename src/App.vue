@@ -9,11 +9,11 @@ import HelloWorld from './components/HelloWorld.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-
       <nav>
         <RouterLink to="/pinia">Pinia</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/use-slots">useSlots</RouterLink>
+        <RouterLink to="/props">props的响应式</RouterLink>
       </nav>
     </div>
   </header>
