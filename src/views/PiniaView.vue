@@ -30,9 +30,29 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs, toRef } from 'vue'
+import { toRefs, toRef, onMounted } from 'vue'
 import { useCounterStore } from '@/stores/countStore'
 import PiniaChild from '@/components/PiniaChild.vue'
+import { DvMessage } from 'divine-plus'
+import { getCurrentInstance } from 'vue'
+
+const instance = getCurrentInstance()!
+
+onMounted(() => {
+  // instance.appContext.config.globalProperties.$message('good')
+  // DvMessage({
+  //   message: '1111',
+  //   type: 'success',
+  //   duration: 0,
+  //   showClose: true
+  // })
+  // DvMessage({
+  //   message: '222',
+  //   type: 'error',
+  //   duration: 0,
+  //   showClose: true
+  // })
+})
 
 const countStore = useCounterStore()
 

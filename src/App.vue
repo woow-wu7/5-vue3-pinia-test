@@ -14,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/use-slots">useSlots</RouterLink>
         <RouterLink to="/props">props的响应式</RouterLink>
+        <RouterLink to="/setupvsdata">setup和data中属性的优先级</RouterLink>
       </nav>
     </div>
   </header>
