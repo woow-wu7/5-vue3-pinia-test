@@ -36,6 +36,11 @@ const router = createRouter({
       path: '/setupvsdata',
       name: 'setupvsdata',
       component: () => import('../views/SetupVsData.vue')
+    },
+    {
+      path: '/fragment',
+      name: 'fragment',
+      component: () => import('../views/FragmentMultiple.vue')
     }
   ]
 })

@@ -15,6 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/use-slots">useSlots</RouterLink>
         <RouterLink to="/props">props的响应式</RouterLink>
         <RouterLink to="/setupvsdata">setup和data中属性的优先级</RouterLink>
+        <RouterLink to="/fragment">Fragment-组件多根节点-测试</RouterLink>
       </nav>
     </div>
   </header>
