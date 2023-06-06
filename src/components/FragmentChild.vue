@@ -7,7 +7,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps({ name: String })
+</script>
 
 <style>
 .fragment1,
