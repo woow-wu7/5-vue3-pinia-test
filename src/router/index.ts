@@ -46,6 +46,11 @@ const router = createRouter({
       path: '/3.3.0-defineModule',
       name: ' 3.3.0-defineModule',
       component: () => import('../views/3.3.0-defineModule.vue')
+    },
+    {
+      path: '/3.3.0-defineOptions',
+      name: ' 3.3.0-defineOptions',
+      component: () => import('../views/3.3.0-defineOptions.vue')
     }
   ]
 })

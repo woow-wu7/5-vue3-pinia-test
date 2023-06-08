@@ -17,6 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/setupvsdata">setup和data中属性的优先级</RouterLink>
         <RouterLink to="/fragment">Fragment-组件多根节点-测试</RouterLink>
         <RouterLink to="/3.3.0-defineModule">vue3.3.0 defineModule</RouterLink>
+        <RouterLink to="/3.3.0-defineOptions">vue3.3.0 defineOptions</RouterLink>
       </nav>
     </div>
   </header>
