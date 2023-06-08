@@ -41,6 +41,11 @@ const router = createRouter({
       path: '/fragment',
       name: 'fragment',
       component: () => import('../views/FragmentMultiple.vue')
+    },
+    {
+      path: '/3.3.0-defineModule',
+      name: ' 3.3.0-defineModule',
+      component: () => import('../views/3.3.0-defineModule.vue')
     }
   ]
 })
