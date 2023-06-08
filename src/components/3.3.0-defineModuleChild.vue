@@ -2,13 +2,13 @@
   <div class="props">
     <h1>This is an Vue3.3.0 defineModuleChild page</h1>
 
-    <!-- <input v-model="modelValue" /> -->
+    <input v-model="modelValue" />
     <input :value="modelValue" @input="onInput" />
   </div>
 </template>
 
 <script setup lang="ts">
-// const modelValue = defineModel()
+const modelValue = defineModel()
 
 defineProps({ modelValue: Number })
 const emit = defineEmits(['update:modelValue'])
