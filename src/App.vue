@@ -18,6 +18,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/fragment">Fragment-组件多根节点-测试</RouterLink>
         <RouterLink to="/3.3.0-defineModule">vue3.3.0 defineModule</RouterLink>
         <RouterLink to="/3.3.0-defineOptions">vue3.3.0 defineOptions</RouterLink>
+        <RouterLink to="/3.3.0-defineEmits">vue3.3.0 defineEmits</RouterLink>
       </nav>
     </div>
   </header>
