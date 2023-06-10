@@ -19,6 +19,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/3.3.0-defineModule">vue3.3.0 defineModule</RouterLink>
         <RouterLink to="/3.3.0-defineOptions">vue3.3.0 defineOptions</RouterLink>
         <RouterLink to="/3.3.0-defineEmits">vue3.3.0 defineEmits</RouterLink>
+        <RouterLink to="/3.3.0-defineProps">vue3.3.0 defineProps</RouterLink>
+        <RouterLink to="/roll-up">RollUp滚动数字</RouterLink>
       </nav>
     </div>
   </header>

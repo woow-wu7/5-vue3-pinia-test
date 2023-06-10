@@ -56,6 +56,16 @@ const router = createRouter({
       path: '/3.3.0-defineEmits',
       name: ' 3.3.0-defineEmits',
       component: () => import('../views/3.3.0-defineEmits.vue')
+    },
+    {
+      path: '/3.3.0-defineProps',
+      name: ' 3.3.0-defineProps',
+      component: () => import('../views/3.3.0-defineProps.vue')
+    },
+    {
+      path: '/roll-up',
+      name: 'roll-up',
+      component: () => import('../views/RollUp.vue')
     }
   ]
 })
