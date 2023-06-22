@@ -25,18 +25,26 @@
       </div>
     </section>
 
+    <DvCollapse v-model="state.collapse">
+      <DvCollapseItem name="1" title="折叠面板">
+        <div>这是展开的内容</div>
+      </DvCollapseItem>
+      <DvCollapseItem name="2" title="折叠面板2">
+        <div>这是展开的内容</div>
+      </DvCollapseItem>
+    </DvCollapse>
+
     <PiniaChild name="name" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { toRefs, toRef, onMounted } from 'vue'
+import { toRefs, toRef, onMounted, reactive } from 'vue'
 import { useCounterStore } from '@/stores/countStore'
 import PiniaChild from '@/components/PiniaChild.vue'
 import { DvMessage } from 'divine-plus'
 import { getCurrentInstance } from 'vue'
-
-const instance = getCurrentInstance()!
+// import { DvLoading } from 'divine-plus'
 
 onMounted(() => {
   // instance.appContext.config.globalProperties.$message('good')
@@ -52,7 +60,18 @@ onMounted(() => {
   //   duration: 0,
   //   showClose: true
   // })
+  // const loading = DvLoading.service({
+  //   text: 'loading...'
+  // })
+  // const instance = getCurrentInstance()
+  // const loading = instance?.appContext.config.globalProperties.$loading()
+  // console.log('loading', loading)
+  // setTimeout(() => {
+  //   loading?.close()
+  // }, 1000)
 })
+
+const state = reactive({ collapse: [] })
 
 const countStore = useCounterStore()
 
