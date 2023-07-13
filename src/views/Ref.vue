@@ -4,14 +4,18 @@
 
     <div>'state.a'{{ state.a }}</div>
     <div>'state.b'{{ state.b }}</div>
-
+    <div>'state.c'{{ state.c }}</div>
+    <div>'state'{{ state }}</div>
+    <hr />
     <div>'state2' {{ state2 }}</div>
 
-    <button @click="onChange">change</button>
+    <button @click="onChange">change - ref是对象时，修改对象的某个属性</button>
+    <button @click="onChange2">change - ref是对象时，赋值属性相同但值不同的 新的对象</button>
+    <button @click="onChange3">change - ref是对象时，赋值原始类型的值</button>
   </section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref, watch } from 'vue'
 
 const state = ref({ a: 1, b: 20 }) // ref 可以是对象， ref 通过 reactive 实现
@@ -51,6 +55,14 @@ watch(state2, (val, oldVal) => {
   console.log('val-a', val)
   console.log('oldVal-a', oldVal) // 111. ---- 当 ref 是基本类型的数据时，val 和 oldVal 可以做出区别
 })
+
+const onChange2 = () => {
+  state.value = { a: 100, b: 2000, c: 3000 }
+}
+
+const onChange3 = () => {
+  state.value = 111
+}
 </script>
 
 <style scoped>
