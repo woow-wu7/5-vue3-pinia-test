@@ -33,6 +33,11 @@ const router = createRouter({
       component: () => import('../views/PropsView.vue')
     },
     {
+      path: '/ref',
+      name: 'ref',
+      component: () => import('../views/Ref.vue')
+    },
+    {
       path: '/setupvsdata',
       name: 'setupvsdata',
       component: () => import('../views/SetupVsData.vue')

@@ -1146,10 +1146,10 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-divine-plus@^1.1.23:
-  version "1.1.23"
-  resolved "https://registry.yarnpkg.com/divine-plus/-/divine-plus-1.1.23.tgz#449500ed657f10a072ee1b1312f25347452687e9"
-  integrity sha512-M8CgoNnDtCEooghrIAlE77kib5je/iM6BoHc+i7KW1Lha6CuYfIg4BwCmQolUqc59gq1drHMaC72aqUe8Jj4wg==
+divine-plus@^1.1.26:
+  version "1.1.26"
+  resolved "https://registry.yarnpkg.com/divine-plus/-/divine-plus-1.1.26.tgz#7fa39e9639ac27b6f7ed6e56bca599176ccf4f94"
+  integrity sha512-AztYb3Um5GMt680JYs+LMbNYl6HDCgQSuOQ4bRsELrCp4N2I+OKtiPuxvfrtgQJp5M+C031upjO4qBhoh8x4Uw==
   dependencies:
     vite-plugin-markdown "^2.1.0"
 

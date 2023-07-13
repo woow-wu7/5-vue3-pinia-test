@@ -29,7 +29,7 @@
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.2",
     "@vue/tsconfig": "^0.1.3",
-    "divine-plus": "^1.1.23",
+    "divine-plus": "^1.1.26",
     "element-plus": "^2.3.5",
     "element-ui": "^2.15.13",
     "eslint": "^8.34.0",
