@@ -35,6 +35,16 @@
     </DvCollapse>
 
     <PiniaChild name="name" />
+    <DvFullscreen>
+      <div>
+        <h1>这是要全屏的 标题</h1>
+        <div>这是要全屏的 内容</div>
+        <dv-icon name="search" />
+        <i class="dv-icon-star"></i>
+      </div>
+    </DvFullscreen>
+
+    <button @click="showMessageCustom">不会消失，需要手动关系</button> &nbsp;
   </div>
 </template>
 
@@ -45,6 +55,18 @@ import PiniaChild from '@/components/PiniaChild.vue'
 import { DvMessage } from 'divine-plus'
 import { getCurrentInstance } from 'vue'
 // import { DvLoading } from 'divine-plus'
+
+const showMessageCustom = () => {
+  DvMessage({
+    message: 'this is a string options',
+    showClose: true,
+    type: 'success',
+    duration: 0,
+    onClose: () => {
+      console.log('close')
+    }
+  })
+}
 
 onMounted(() => {
   // instance.appContext.config.globalProperties.$message('good')
