@@ -22,6 +22,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/3.3.0-defineEmits">vue3.3.0 defineEmits</RouterLink>
         <RouterLink to="/3.3.0-defineProps">vue3.3.0 defineProps</RouterLink>
         <RouterLink to="/roll-up">RollUp滚动数字</RouterLink>
+        <RouterLink to="/unocss">unocss test</RouterLink>
       </nav>
     </div>
   </header>

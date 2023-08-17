@@ -71,6 +71,11 @@ const router = createRouter({
       path: '/roll-up',
       name: 'roll-up',
       component: () => import('../views/RollUp.vue')
+    },
+    {
+      path: '/unocss',
+      name: 'unocss',
+      component: () => import('../views/Uno.vue')
     }
   ]
 })

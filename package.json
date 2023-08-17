@@ -24,6 +24,7 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.14.0",
+    "@unocss/preset-rem-to-px": "^0.55.1",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vue/eslint-config-prettier": "^7.1.0",
